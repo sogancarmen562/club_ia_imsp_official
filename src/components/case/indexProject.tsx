@@ -60,13 +60,12 @@ const CaseProjects: React.FC<TitleProps> = ({ numberOfProject }) => {
                       width={500}
                       height={300}
                       className="img-fluid"
-                      src={value?.files[0]?.url}
-                      alt={value?.files[0]?.original_name}
+                      src={value?.medias?.url}
                     />
                   </div>
                   <a className="case-overlay text-decoration-none" href="">
                     <h5 className="lh-base text-white mb-3">{value.title}</h5>
-                    <small>Ajouté le {value.date_publication}</small>
+                    <small>Ajouté le {value.createdAt}</small>
                     <button
                       onClick={(e) => handleSubmit(value.id, e)}
                       className="btn btn-square rounded-pill btn-primary"
