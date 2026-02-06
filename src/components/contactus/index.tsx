@@ -12,13 +12,13 @@ export default function Contact() {
     e.preventDefault();
     let response: any;
     try {
-      response = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/user/contactus`, {
+      response = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/contact-us`, {
         name: name,
         email: email,
         subject: subject,
         message: message,
       });
-      console.log(name);
+      // console.log(name);
       if (response.data?.sucess == true) {
         setName("");
         setEmail("");
