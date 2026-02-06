@@ -11,9 +11,7 @@ export default function Newletters() {
     e.preventDefault();
     let response: any;
     try {
-      response = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/user/email`, {
-        email: email,
-      });
+      response = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/user/subscriber/${email}`, {});
       if (response.data?.sucess == true) {
         setEmail("");
       }
